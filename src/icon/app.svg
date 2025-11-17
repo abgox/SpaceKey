@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <mask id="cursorMask">
+    <rect width="512" height="512" fill="white" />
+
+    <g transform="translate(256,256) scale(1.22) translate(-256,-256)">
+      <path fill="black" d="M 175 110
+           L 175 390
+           Q 175 400 188 400
+           L 215 400
+           Q 228 400 228 390
+           L 228 280
+
+           L 300 390
+           Q 310 400 324 400
+           L 350 400
+           Q 362 400 362 387
+           Q 362 378 356 370
+           L 277 256
+
+           L 356 142
+           Q 362 134 362 126
+           Q 362 112 350 112
+           L 324 112
+           Q 310 112 300 122
+           L 228 215
+
+           L 228 110
+           Q 228 100 215 100
+           L 188 100
+           Q 175 100 175 110
+           Z" />
+    </g>
+  </mask>
+
+  <rect x="8" y="8" width="496" height="496" rx="64" ry="64" fill="#1E88FF" mask="url(#cursorMask)" />
+</svg>
