@@ -1,11 +1,4 @@
-<p align="center">
-    <h1 align="center">✨ SpaceKey ✨</h1>
-</p>
-
-<p align="center">
-    <a href="README.md">English</a> |
-    <a href="README-CN.md">简体中文</a>
-</p>
+<h1 align="center">✨<a href="https://spacekey.abgox.com/">SpaceKey</a>✨</h1>
 
 <p align="center">
     <a href="https://github.com/abgox/SpaceKey/blob/main/license">
@@ -34,10 +27,10 @@
 
 ## 安装
 
-1. 添加 [abyss](https://abyss.abgox.com) bucket ([Github](https://github.com/abgox/abyss) 或 [Gitee](https://gitee.com/abgox/abyss))
+1.  添加 [abyss](https://abyss.abgox.com) bucket ([Github](https://github.com/abgox/abyss) 或 [Gitee](https://gitee.com/abgox/abyss))
 
-2. 安装 `abgox.SpaceKey`
+2.  安装 `abgox.SpaceKey`
 
-```shell
-scoop install abyss/abgox.SpaceKey
-```
+    ```shell
+    scoop install abyss/abgox.SpaceKey
+    ```
