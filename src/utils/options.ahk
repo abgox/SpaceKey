@@ -12,5 +12,8 @@ Persistent
 ListLines 0
 KeyHistory 5
 
-A_IconTip := "SpaceKey - abgox 的按键输入方案"
+fileDesc := "SpaceKey - abgox 的按键输入方案"
+
+A_IconTip := fileDesc
+
 TraySetIcon("icon/app.png", , 1)
