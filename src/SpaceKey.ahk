@@ -21,4 +21,8 @@
 #Include window\terminal\windows-terminal.ahk
 #Include window\terminal\wave.ahk
 
-#Include window\browser.ahk
+#Include window\browser\edge.ahk
+#Include window\browser\chrome.ahk
+#Include window\browser\firefox.ahk
+#Include window\browser\zen.ahk
+#Include window\browser\brave.ahk
