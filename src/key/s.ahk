@@ -1,6 +1,8 @@
 ; s(symbol): 符号
 Space & s:: {
-    ; ss: Ctrl + s
+    /*
+      ss: Ctrl + s
+    */
     hit_key_double(() => Sleep(0), () => SendInput("^{s}"))
 }
 

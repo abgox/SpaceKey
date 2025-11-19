@@ -1,6 +1,8 @@
 ; d(digit): 数字输入
 Space & d:: {
-    ; dd: Delete
+    /*
+      dd: 触发 Delete
+    */
     hit_key_double(() => Sleep(0), () => SendInput("{Delete}"))
 }
 

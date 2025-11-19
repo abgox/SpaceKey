@@ -1,7 +1,9 @@
 ; f(function): 功能按键
 Space & f:: {
-    ; ff: Ctrl + f
-    ; fff: Ctrl + h
+    /*
+      ff: Ctrl + f
+      fff: Ctrl + h
+    */
     hit_key_triple(() => Sleep(0), () => SendInput("^{f}"), () => SendInput("^{h}"))
 }
 

@@ -1,27 +1,21 @@
-#Include utils\options.ahk
-#Include utils\tray-menu.ahk
+#Include lib\gui.ahk
+#Include lib\key.ahk
+#Include lib\tip.ahk
+#Include lib\window.ahk
 
-#Include lib\key\hit-key-double.ahk
-#Include lib\key\hit-key-triple.ahk
+#Include util\manifest.ahk
+#Include util\tray-menu.ahk
 
-#Include lib\tip\tip.ahk
-#Include lib\tip\tab-tip.ahk
+#Include key\core.ahk
+#Include key\d.ahk
+#Include key\f.ahk
+#Include key\s.ahk
+#Include key\v.ahk
+#Include key\w.ahk
 
-#Include lib\window\brightness.ahk
-#Include lib\window\transparence.ahk
-
-#Include keys\core.ahk
-#Include keys\f.ahk
-#Include keys\s.ahk
-#Include keys\v.ahk
-#Include keys\d.ahk
-#Include keys\w.ahk
-
-#Include window\editor\utils.ahk
 #Include window\editor\vscode.ahk
 #Include window\editor\webstorm.ahk
 #Include window\editor\hbuilderx.ahk
-
 #Include window\editor\heynote.ahk
 
 #Include window\terminal\windows-terminal.ahk

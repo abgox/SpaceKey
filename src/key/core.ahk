@@ -1,5 +1,5 @@
-; 使用 $ 来避免触发自己，陷入死循环
-; 如果需要连续空格，先禁用 SpaceKey，输入连续空格，再启用脚本
+; 如果想要按住空格以输入连续空格，你需要先暂停 SpaceKey
+; 你可以直接点击任务栏中的 SpaceKey 托盘图标来切换暂停/运行状态
 $Space::Space
 
 ; 方向
@@ -8,11 +8,10 @@ Space & k::Down
 Space & j::Left
 Space & l::Right
 
-; 换行/删除/...
-Space & e::Enter
-Space & b::BackSpace
+Space & e::Enter ; 回车
+Space & b::BackSpace ; 退格
 Space & q::Esc
-Space & Tab::+Tab
+Space & Tab::+Tab ; Shift + Tab
 
 ; F1-F12
 Space & 1::F1
