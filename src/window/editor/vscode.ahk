@@ -6,8 +6,12 @@
 
 win_active_vscode() {
     return WinActive("ahk_exe Code.exe")
+        || WinActive("ahk_exe VSCodium.exe")
         || WinActive("ahk_exe Trae.exe")
         || WinActive("ahk_exe Trae CN.exe")
+        || WinActive("ahk_exe Qoder.exe")
+        || WinActive("ahk_exe CodeBuddy.exe")
+        || WinActive("ahk_exe Windsurf.exe")
 }
 
 clear_vscode_side_tip() {
