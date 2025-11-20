@@ -41,8 +41,8 @@ Space & p:: SendInput("+{5}")
 Space & h:: SendInput("+{7}")
 
 ; 输出: *
-; 规律: * 像 , 旋转一圈的样子
-Space & ,:: SendInput("+{8}")
+; 规律: n(night) 晚上有星星(*)
+Space & n:: SendInput("+{8}")
 
 ; 输出: -
 ; 规律: m => middle 中横线
