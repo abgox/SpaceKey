@@ -10,7 +10,7 @@ Space & l::Right
 
 Space & e::Enter ; 回车
 Space & b::BackSpace ; 退格
-Space & q::Esc
+Space & q::Esc ; q(quit)
 Space & Tab::+Tab ; Shift + Tab
 
 ; F1-F12

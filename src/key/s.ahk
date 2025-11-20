@@ -1,9 +1,9 @@
 ; s(symbol): 符号
 Space & s:: {
-    /*
-      ss: Ctrl + s
-    */
-    hit_key_double(() => Sleep(0), () => SendInput("^{s}"))
+  hit_key_double(
+    () => Sleep(0),
+    () => SendInput("^{s}") ; 双击触发 Ctrl + s
+  )
 }
 
 #HotIf GetKeyState("s", "p")
@@ -17,7 +17,7 @@ Space & t:: SendInput("+{``}")
 Space & b:: SendInput("{Text}``")
 
 ; 输出: !
-; 规律: ! => gan 拼音(感叹号)
+; 规律: ! => gǎn 拼音(感叹号)
 Space & g:: SendInput("{Text}!")
 
 ; 输出: @
@@ -25,7 +25,7 @@ Space & g:: SendInput("{Text}!")
 Space & o:: SendInput("+{2}")
 
 ; 输出: #
-; 规律: j => jing 拼音(井号)
+; 规律: j => jǐng 拼音(井号)
 Space & j:: SendInput("+{3}")
 
 ; 输出: $
@@ -37,7 +37,7 @@ Space & d:: SendInput("{Text}$")
 Space & p:: SendInput("+{5}")
 
 ; 输出: &
-; 规律: h => he 拼音(和)
+; 规律: h => hé 拼音(和)
 Space & h:: SendInput("+{7}")
 
 ; 输出: *
@@ -65,7 +65,7 @@ Space & a:: SendInput("+{=}")
 Space & c:: SendInput("{Text}^")
 
 ; 输出: ()
-; 规律: k => kuo 拼音(括号)
+; 规律: k => kuò 拼音(括号)
 Space & k:: SendInput("{Text}()"), SendInput("{Left}")
 
 ; 输出: {}

@@ -37,7 +37,11 @@ webstorm := {
 
 ; t(terminal): 终端
 Space & t:: {
-    hit_key_double(() => SendInput("^{``}"), () => SendInput("^+{``}"), 300)
+    hit_key_double(
+        () => SendInput("^{``}"), ; 单击打开终端
+        () => SendInput("^+{``}"), ; 双击新建终端
+        300
+    )
     clear_webstorm_side_tip()
 }
 
@@ -59,10 +63,10 @@ Space & m:: {
 
 ; d(delete): 删除文件/目录
 Space & d:: {
-    /*
-      dd: 触发 Delete
-    */
-    hit_key_double(() => Sleep(0), () => SendInput("{Delete}"))
+    hit_key_double(
+        () => Sleep(0),
+        () => SendInput("{Delete}") ; 双击触发 Delete
+    )
 }
 
 #HotIf
@@ -100,29 +104,29 @@ Space & g::^g
 
 ; r(run): 运行当前文件
 Space & r:: {
-    /*
-      r: 运行
-      rr: 终止运行
-    */
-    hit_key_double(() => SendInput("^{F5}"), () => SendInput("+{F5}"), 300)
+    hit_key_double(
+        () => SendInput("^{F5}"), ; 单击触发运行
+        () => SendInput("+{F5}"), ; 双击触发终止运行
+        300
+    )
 }
 
 ; t(terminal): 终端
 Space & t:: {
-    /*
-      t: 打开终端
-      tt: 新建终端
-    */
-    hit_key_double(() => SendInput("^{``}"), () => SendInput("^+{``}"), 300)
+    hit_key_double(
+        () => SendInput("^{``}"), ; 单击打开终端
+        () => SendInput("^+{``}"), ; 双击新建终端
+        300
+    )
 }
 
 ; c(comment): 注释
 Space & c:: {
-    /*
-      c: 行注释
-      cc: 块注释
-    */
-    hit_key_double(() => SendInput("^{/}"), () => SendInput("+!{a}"), 200)
+    hit_key_double(
+        () => SendInput("^{/}"), ; 单击触发行注释
+        () => SendInput("+!{a}"), ; 双击触发块注释
+        200
+    )
 }
 
 ; 向下插入一行
@@ -158,11 +162,11 @@ Space & Enter::^Enter
 ; 以递归方式折叠/展开 (当前层级)
 ; 按键: LAlt + f
 <!f:: {
-    /*
-        f: 折叠
-        ff: 展开
-    */
-    hit_key_double(() => SendInput("^+{[}"), () => SendInput("^+{]}"), 300)
+    hit_key_double(
+        () => SendInput("^+{[}"), ; 单击触发折叠
+        () => SendInput("^+{]}"), ; 双击触发展开
+        300
+    )
 }
 
 #HotIf

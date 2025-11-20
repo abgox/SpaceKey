@@ -1,10 +1,10 @@
 ; f(function): 功能按键
 Space & f:: {
-    /*
-      ff: Ctrl + f
-      fff: Ctrl + h
-    */
-    hit_key_triple(() => Sleep(0), () => SendInput("^{f}"), () => SendInput("^{h}"))
+    hit_key_triple(
+        () => Sleep(0),
+        () => SendInput("^{f}"), ; 双击触发 Ctrl + f
+        () => SendInput("^{h}") ; 三击触发 Ctrl + h
+    )
 }
 
 #HotIf GetKeyState("f", "p")
@@ -13,7 +13,7 @@ Space & k::PgDn
 Space & j::Home
 Space & l::End
 
-; 在文件管理器中定位应用程序， f + e = find exe
+; f + e(find exe): 在 explorer(文件资源管理器) 中打开应用程序所在位置
 Space & e:: {
     path := ProcessGetPath(WinGetPID("A"))
     Run("explorer.exe /select," '"' path '"')
@@ -23,9 +23,11 @@ Space & e:: {
 Space & m:: {
     static flag := 0
     if (flag) {
+        ; 退出右键菜单
         SendInput("{Esc}")
         flag := 0
     } else {
+        ; 触发右键菜单
         SendInput("{AppsKey}")
         flag := 1
     }

@@ -1,9 +1,9 @@
 ; d(digit): 数字输入
 Space & d:: {
-    /*
-      dd: 触发 Delete
-    */
-    hit_key_double(() => Sleep(0), () => SendInput("{Delete}"))
+  hit_key_double(
+    () => Sleep(0),
+    () => SendInput("{Delete}") ; 双击触发 Delete
+  )
 }
 
 #HotIf GetKeyState("d", "p")
