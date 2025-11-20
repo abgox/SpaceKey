@@ -102,7 +102,6 @@ Space & c:: {
     hit_key_double(
         () => SendInput("^{/}"), ; 单击触发行注释
         () => SendInput("^+{/}"), ; 双击触发块注释
-        200
     )
 }
 
@@ -133,7 +132,6 @@ Space & Enter::^Enter
     hit_key_double(
         () => SendInput("!+{-}"), ; 单击触发折叠
         () => SendInput("!+{=}"), ; 双击触发展开
-        300
     )
 }
 

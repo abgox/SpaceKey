@@ -40,7 +40,6 @@ Space & t:: {
     hit_key_double(
         () => SendInput("^{``}"), ; 单击打开终端
         () => SendInput("^+{``}"), ; 双击新建终端
-        300
     )
     clear_webstorm_side_tip()
 }
@@ -107,7 +106,6 @@ Space & r:: {
     hit_key_double(
         () => SendInput("^{F5}"), ; 单击触发运行
         () => SendInput("+{F5}"), ; 双击触发终止运行
-        300
     )
 }
 
@@ -116,7 +114,6 @@ Space & t:: {
     hit_key_double(
         () => SendInput("^{``}"), ; 单击打开终端
         () => SendInput("^+{``}"), ; 双击新建终端
-        300
     )
 }
 
@@ -125,7 +122,6 @@ Space & c:: {
     hit_key_double(
         () => SendInput("^{/}"), ; 单击触发行注释
         () => SendInput("+!{a}"), ; 双击触发块注释
-        200
     )
 }
 
@@ -165,7 +161,6 @@ Space & Enter::^Enter
     hit_key_double(
         () => SendInput("^+{[}"), ; 单击触发折叠
         () => SendInput("^+{]}"), ; 双击触发展开
-        300
     )
 }
 
