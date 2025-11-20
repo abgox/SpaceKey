@@ -17,5 +17,5 @@ Space & m::1
 Space & ,::2
 Space & .::3
 Space & n::0
-Space & h:: SendInput("{Text}.")
+Space & h:: SendText(".")
 #HotIf

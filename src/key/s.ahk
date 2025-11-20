@@ -14,11 +14,11 @@ Space & t:: SendInput("+{``}")
 
 ; 输出: `
 ; 规律: b => back quote 反单引号
-Space & b:: SendInput("{Text}``")
+Space & b:: SendText("``")
 
 ; 输出: !
 ; 规律: ! => gǎn 拼音(感叹号)
-Space & g:: SendInput("{Text}!")
+Space & g:: SendText("!")
 
 ; 输出: @
 ; 规律: o 和 @ 长得像
@@ -30,7 +30,7 @@ Space & j:: SendInput("+{3}")
 
 ; 输出: $
 ; 规律: d => dollar 美元符号
-Space & d:: SendInput("{Text}$")
+Space & d:: SendText("$")
 
 ; 输出: %
 ; 规律: p => percent 百分号
@@ -50,7 +50,7 @@ Space & m:: SendInput("{-}")
 
 ; 输出: _
 ; 规律: u => underline 下划线
-Space & u:: SendInput("{Text}_")
+Space & u:: SendText("_")
 
 ; 输出: =
 ; 规律: e => equal 等于
@@ -62,18 +62,18 @@ Space & a:: SendInput("+{=}")
 
 ; 输出: ^
 ; 规律: c => caret 脱字符
-Space & c:: SendInput("{Text}^")
+Space & c:: SendText("^")
 
 ; 输出: ()
 ; 规律: k => kuò 拼音(括号)
-Space & k:: SendInput("{Text}()"), SendInput("{Left}")
+Space & k:: SendText("()"), SendInput("{Left}")
 
 ; 输出: {}
 ; 规律: l => large 大括号
-Space & l:: SendInput("{Text}{}"), SendInput("{Left}")
+Space & l:: SendText("{}"), SendInput("{Left}")
 
 ; 输出: \
-Space & /:: SendInput("{Text}\")
+Space & /:: SendText("\")
 
 ; 输出: |
 ; 规律: i 和 | 长得像
@@ -83,19 +83,19 @@ Space & i:: SendInput("+{\}")
 
 
 ; 输出: []
-Space & [:: SendInput("{Text}[]"), SendInput("{Left}")
+Space & [:: SendText("[]"), SendInput("{Left}")
 
 ; 输出: <
-Space & ,:: SendInput("{Text}<")
+Space & ,:: SendText("<")
 
 ; 输出: >
-Space & .:: SendInput("{Text}>")
+Space & .:: SendText(">")
 
 ; 输出: :
-Space & `;:: SendInput("{Text}:")
+Space & `;:: SendText(":")
 
 ; 输出: ""
-Space & ':: SendInput('{Text}""'), SendInput("{Left}")
+Space & ':: SendText('""'), SendInput("{Left}")
 
 ; 输出: ?
-Space & /:: SendInput("{Text}?")
+Space & /:: SendText("?")
