@@ -1,6 +1,11 @@
 <h1 align="center">✨<a href="https://spacekey.abgox.com/">SpaceKey</a>✨</h1>
 
 <p align="center">
+    <a href="https://github.com/abgox/SpaceKey">Github</a> |
+    <a href="https://gitee.com/abgox/SpaceKey">Gitee</a>
+</p>
+
+<p align="center">
     <a href="https://github.com/abgox/SpaceKey/blob/main/license">
         <img src="https://img.shields.io/github/license/abgox/SpaceKey" alt="license" />
     </a>
@@ -39,10 +44,10 @@
 
 ```txt
 SpaceKey/
-├── SpaceKey.bat            # 启动脚本
+├── SpaceKey.bat     # 启动脚本
 ├── src/
-    ├── key/                # 按键映射(核心/全局)
-    ├── window/             # 按键映射(应用窗口)
-    └── ...                 # 其他文件
-└── ...                     # 其他文件
+    ├── key/         # 按键映射(核心/全局)
+    ├── window/      # 按键映射(应用窗口)
+    └── ...          # 其他文件
+└── ...              # 其他文件
 ```
