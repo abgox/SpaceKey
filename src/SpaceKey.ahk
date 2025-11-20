@@ -19,6 +19,7 @@
 #Include window\editor\heynote.ahk
 
 #Include window\terminal\windows-terminal.ahk
+#Include window\terminal\tabby.ahk
 #Include window\terminal\wave.ahk
 
 #Include window\browser\edge.ahk
