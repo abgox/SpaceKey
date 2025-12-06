@@ -50,7 +50,7 @@ Space & m:: {
 ; d(delete): 删除文件/目录
 Space & d:: {
     hit_key_double(
-        () => Sleep(0),
+        () => "",
         () => (
             ; 双击触发删除
             SendInput("{AppsKey}"),
@@ -100,8 +100,8 @@ Space & t::!c
 ; c(comment): 注释
 Space & c:: {
     hit_key_double(
-        () => SendInput("^{/}"), ; 单击触发行注释
-        () => SendInput("^+{/}"), ; 双击触发块注释
+        () => (SendInput("^{/}")), ; 单击触发行注释
+        () => (SendInput("^+{/}")), ; 双击触发块注释
     )
 }
 
@@ -130,8 +130,8 @@ Space & Enter::^Enter
 ; 按键: LAlt + f
 <!f:: {
     hit_key_double(
-        () => SendInput("!+{-}"), ; 单击触发折叠
-        () => SendInput("!+{=}"), ; 双击触发展开
+        () => (SendInput("!+{-}")), ; 单击触发折叠
+        () => (SendInput("!+{=}")), ; 双击触发展开
     )
 }
 

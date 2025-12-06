@@ -1,8 +1,8 @@
 ; s(symbol): 符号
 Space & s:: {
   hit_key_double(
-    () => Sleep(0),
-    () => SendInput("^{s}") ; 双击触发 Ctrl + s
+    () => "",
+    () => (SendInput("^{s}")) ; 双击触发 Ctrl + s
   )
 }
 
@@ -13,7 +13,7 @@ Space & s:: {
 Space & t:: SendInput("+{``}")
 
 ; 输出: `
-; 规律: b => back quote 反单引号
+; 规律: b => backtick 反单引号
 Space & b:: SendText("``")
 
 ; 输出: !

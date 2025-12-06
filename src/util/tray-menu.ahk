@@ -9,7 +9,7 @@ guide_gui(info) {
     return g
 }
 A_TrayMenu.Add()
-A_TrayMenu.Add("以管理员权限启动", (*) => Run('*RunAs "' A_AhkPath '" /restart "' A_ScriptFullPath '"'))
+A_TrayMenu.Add("以管理员权限启动", (*) => (Run('*RunAs "' A_AhkPath '" /restart "' A_ScriptFullPath '"')))
 if (A_IsAdmin) {
     A_TrayMenu.Check("以管理员权限启动")
 }
@@ -50,7 +50,7 @@ A_TrayMenu.Default := "暂停/运行"
 A_TrayMenu.ClickCount := 1
 
 A_TrayMenu.Add()
-A_TrayMenu.Add("重启", (*) => Run('"' A_AhkPath '" "' A_ScriptFullPath '"'))
+A_TrayMenu.Add("重启", (*) => (Run('"' A_AhkPath '" "' A_ScriptFullPath '"')))
 
 A_TrayMenu.Add()
 A_TrayMenu.Add("关于", (*) => create_unique_gui(about_gui).Show())
@@ -65,4 +65,4 @@ about_gui(info) {
 }
 
 A_TrayMenu.Add()
-A_TrayMenu.Add("退出", (*) => ExitApp())
+A_TrayMenu.Add("退出", (*) => (ExitApp()))

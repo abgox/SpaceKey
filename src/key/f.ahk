@@ -1,9 +1,9 @@
 ; f(function): 功能按键
 Space & f:: {
     hit_key_triple(
-        () => Sleep(0),
-        () => SendInput("^{f}"), ; 双击触发 Ctrl + f
-        () => SendInput("^{h}") ; 三击触发 Ctrl + h
+        () => "",
+        () => (SendInput("^{f}")), ; 双击触发 Ctrl + f
+        () => (SendInput("^{h}")) ; 三击触发 Ctrl + h
     )
 }
 
@@ -14,10 +14,7 @@ Space & j::Home
 Space & l::End
 
 ; f + e(find exe): 在 explorer(文件资源管理器) 中打开应用程序所在位置
-Space & e:: {
-    path := ProcessGetPath(WinGetPID("A"))
-    Run("explorer.exe /select," '"' path '"')
-}
+Space & e:: Run("explorer.exe /select," '"' ProcessGetPath(WinGetPID("A")) '"')
 
 ; m(menu): 右键菜单
 Space & m:: {
