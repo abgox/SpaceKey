@@ -17,5 +17,6 @@ Space & m::1
 Space & ,::2
 Space & .::3
 Space & n::0
+Space & p:: SendText(".") ; p(point)
 Space & h:: SendText(".")
 #HotIf
