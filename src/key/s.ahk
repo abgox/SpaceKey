@@ -17,7 +17,7 @@ Space & t:: SendInput("+{``}")
 Space & b:: SendText("``")
 
 ; 输出: !
-; 规律: ! => gǎn 拼音(感叹号)
+; 规律: g => gǎn 拼音(感叹号)
 Space & g:: SendText("!")
 
 ; 输出: @
@@ -41,7 +41,7 @@ Space & p:: SendInput("+{5}")
 Space & h:: SendInput("+{7}")
 
 ; 输出: *
-; 规律: n(night) 晚上有星星(*)
+; 规律: n => night 晚上有星星(*)
 Space & n:: SendInput("+{8}")
 
 ; 输出: -
@@ -73,6 +73,7 @@ Space & k:: SendText("()"), SendInput("{Left}")
 Space & l:: SendText("{}"), SendInput("{Left}")
 
 ; 输出: \
+; 规律: 方向相反
 Space & /:: SendText("\")
 
 ; 输出: |
