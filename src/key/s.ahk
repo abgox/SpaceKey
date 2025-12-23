@@ -13,7 +13,7 @@ Space & s:: {
 Space & t:: SendInput("+{``}")
 
 ; 输出: `
-; 规律: b => backtick 反单引号
+; 规律: b => backtick/backquote 反单引号
 Space & b:: SendText("``")
 
 ; 输出: !
@@ -36,6 +36,10 @@ Space & d:: SendText("$")
 ; 规律: p => percent 百分号
 Space & p:: SendInput("+{5}")
 
+; 输出: ^
+; 规律: c => caret 脱字符
+Space & c:: SendText("^")
+
 ; 输出: &
 ; 规律: h => hé 拼音(和)
 Space & h:: SendInput("+{7}")
@@ -44,41 +48,37 @@ Space & h:: SendInput("+{7}")
 ; 规律: n => night 晚上有星星(*)
 Space & n:: SendInput("+{8}")
 
-; 输出: -
-; 规律: m => middle 中横线
-Space & m:: SendInput("{-}")
-
-; 输出: _
-; 规律: u => underline 下划线
-Space & u:: SendText("_")
-
-; 输出: =
-; 规律: e => equal 等于
-Space & e:: SendInput("{=}")
-
-; 输出: +
-; 规律: a => add 加号
-Space & a:: SendInput("+{=}")
-
-; 输出: ^
-; 规律: c => caret 脱字符
-Space & c:: SendText("^")
-
 ; 输出: ()
 ; 规律: k => kuò 拼音(括号)
 Space & k:: SendText("()"), SendInput("{Left}")
 
 ; 输出: {}
-; 规律: l => large 大括号
+; 规律: l => large brackets 大括号
 Space & l:: SendText("{}"), SendInput("{Left}")
 
-; 输出: \
-; 规律: 方向相反
-Space & /:: SendText("\")
+; 输出: -
+; 规律: m => minus(减号)/middle(中横线)
+Space & m:: SendInput("{-}")
+
+; 输出: _
+; 规律: u => underline/underscore 下划线
+Space & u:: SendText("_")
+
+; 输出: +
+; 规律: a => add 加号
+Space & a:: SendInput("+{=}")
+
+; 输出: =
+; 规律: e => equal 等于
+Space & e:: SendInput("{=}")
 
 ; 输出: |
 ; 规律: i 和 | 长得像
 Space & i:: SendInput("+{\}")
+
+; 输出: \
+; 规律: 方向相反
+Space & /:: SendText("\")
 
 #HotIf
 
@@ -86,17 +86,17 @@ Space & i:: SendInput("+{\}")
 ; 输出: []
 Space & [:: SendText("[]"), SendInput("{Left}")
 
-; 输出: <
-Space & ,:: SendText("<")
-
-; 输出: >
-Space & .:: SendText(">")
-
 ; 输出: :
 Space & `;:: SendText(":")
 
 ; 输出: ""
 Space & ':: SendText('""'), SendInput("{Left}")
+
+; 输出: <
+Space & ,:: SendText("<")
+
+; 输出: >
+Space & .:: SendText(">")
 
 ; 输出: ?
 Space & /:: SendText("?")
