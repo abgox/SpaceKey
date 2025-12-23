@@ -25,8 +25,8 @@ Space & g:: SendText("!")
 Space & o:: SendInput("+{2}")
 
 ; 输出: #
-; 规律: j => jǐng 拼音(井号)
-Space & j:: SendInput("+{3}")
+; 规律: n => number sign 井号
+Space & n:: SendInput("+{3}")
 
 ; 输出: $
 ; 规律: d => dollar 美元符号
@@ -45,8 +45,12 @@ Space & c:: SendText("^")
 Space & h:: SendInput("+{7}")
 
 ; 输出: *
-; 规律: n => night 晚上有星星(*)
-Space & n:: SendInput("+{8}")
+; 规律: a => asterisk 星号
+Space & a:: SendInput("+{8}")
+
+; 输出: []
+; 规律: j => jǔ 矩形 => 方 => 方括号
+Space & j:: SendText("[]"), SendInput("{Left}")
 
 ; 输出: ()
 ; 规律: k => kuò 拼音(括号)
@@ -65,16 +69,16 @@ Space & m:: SendInput("{-}")
 Space & u:: SendText("_")
 
 ; 输出: +
-; 规律: a => add 加号
-Space & a:: SendInput("+{=}")
+; 规律: i => increase 加号
+Space & i:: SendInput("+{=}")
 
 ; 输出: =
 ; 规律: e => equal 等于
 Space & e:: SendInput("{=}")
 
 ; 输出: |
-; 规律: i 和 | 长得像
-Space & i:: SendInput("+{\}")
+; 规律: v => vertical bar 竖线
+Space & v:: SendInput("+{\}")
 
 ; 输出: \
 ; 规律: 方向相反

@@ -18,5 +18,4 @@ Space & i::8
 Space & o::9
 Space & n::0 ; n(null)
 Space & p:: SendText(".") ; p(period/point)
-Space & h:: SendText(".")
 #HotIf
