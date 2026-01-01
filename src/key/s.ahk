@@ -17,7 +17,7 @@ Space & t:: SendInput("+{``}")
 Space & b:: SendText("``")
 
 ; 输出: !
-; 规律: g => gǎn 拼音(感叹号)
+; 规律: g => gǎn (拼音) => 感叹号
 Space & g:: SendText("!")
 
 ; 输出: @
@@ -41,7 +41,7 @@ Space & p:: SendInput("+{5}")
 Space & c:: SendText("^")
 
 ; 输出: &
-; 规律: h => hé 拼音(和)
+; 规律: h => hé (拼音) => 和 => 与
 Space & h:: SendInput("+{7}")
 
 ; 输出: *
@@ -49,11 +49,11 @@ Space & h:: SendInput("+{7}")
 Space & a:: SendInput("+{8}")
 
 ; 输出: []
-; 规律: j => jǔ 矩形 => 方 => 方括号
+; 规律: j => jǔ (拼音) => 矩形 => 方 => 方括号
 Space & j:: SendText("[]"), SendInput("{Left}")
 
 ; 输出: ()
-; 规律: k => kuò 拼音(括号)
+; 规律: k => kuò (拼音) => 括号
 Space & k:: SendText("()"), SendInput("{Left}")
 
 ; 输出: {}
@@ -69,7 +69,7 @@ Space & m:: SendInput("{-}")
 Space & u:: SendText("_")
 
 ; 输出: +
-; 规律: i => increase 加号
+; 规律: i => increase 加
 Space & i:: SendInput("+{=}")
 
 ; 输出: =
