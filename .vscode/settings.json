@@ -6,10 +6,5 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "filename-lint.enabled": true,
-  "filename-lint.excludePatterns": [
-    "**/src/AutoHotkey",
-    "**/SpaceKey.ahk",
-    "**/SpaceKey.bat",
-    "**/SpaceKey.ini"
-  ]
+  "filename-lint.excludePatterns": ["**/src/AutoHotkey", "**/SpaceKey.*"]
 }
