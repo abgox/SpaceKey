@@ -1,11 +1,5 @@
 ; f(function): 功能按键
-Space & f:: {
-    hit_key_triple(
-        () => "",
-        () => (SendInput("^{f}")), ; 双击触发 Ctrl + f
-        () => (SendInput("^{h}")) ; 三击触发 Ctrl + h
-    )
-}
+Space & f:: return
 
 #HotIf GetKeyState("f", "p")
 Space & i::PgUp
@@ -13,10 +7,12 @@ Space & k::PgDn
 Space & j::Home
 Space & l::End
 
-; f + e(find exe): 在 explorer(文件资源管理器) 中打开应用程序所在位置
-Space & e:: Run("explorer.exe /select," '"' ProcessGetPath(WinGetPID("A")) '"')
+Space & e::Esc
+Space & d::Delete
 
 ; m(menu): 右键菜单
+; 第一次触发: 打开右键菜单
+; 第二次触发: 退出右键菜单
 Space & m:: {
     static flag := 0
     if (flag) {
@@ -28,5 +24,15 @@ Space & m:: {
         SendInput("{AppsKey}")
         flag := 1
     }
+}
+
+; w(window): 窗口置顶 / 取消置顶
+Space & w:: {
+    if !has_active_window()
+        return
+    title := WinGetTitle("A")
+    WinSetAlwaysOnTop(-1, "A")
+    prefix := WinGetExStyle("A") & 0x8 ? "【置顶】" : "【取消置顶】"
+    show_tip(prefix title, , 20)
 }
 #HotIf

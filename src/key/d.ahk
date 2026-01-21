@@ -1,10 +1,5 @@
 ; d(digit): 数字输入
-Space & d:: {
-  hit_key_double(
-    () => "",
-    () => (SendInput("{Delete}")) ; 双击触发 Delete
-  )
-}
+Space & d:: return
 
 #HotIf GetKeyState("d", "p")
 Space & m::1

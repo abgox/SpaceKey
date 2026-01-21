@@ -1,10 +1,5 @@
 ; s(symbol): 符号
-Space & s:: {
-  hit_key_double(
-    () => "",
-    () => (SendInput("^{s}")) ; 双击触发 Ctrl + s
-  )
-}
+Space & s:: return
 
 #HotIf GetKeyState("s", "p")
 
