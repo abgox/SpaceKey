@@ -33,10 +33,10 @@ change_screen_brightness(offset) {
 
     hLCD := DllCall("CreateFile"
         , "Str", "\\.\LCD"
-        , "UInt", 0x80000000 | 0x40000000 ;Read | Write
+        , "UInt", 0x80000000 | 0x40000000 ; Read | Write
         , "UInt", 0x1 | 0x2  ; File Read | File Write
         , "UInt", 0
-        , "UInt", 0x3        ; open any existing file
+        , "UInt", 0x3        ; Open any existing file
         , "UInt", 0
         , "UInt", 0)
 
@@ -45,14 +45,14 @@ change_screen_brightness(offset) {
         return -1
     }
 
-    DevVideo := 0x00000023, BuffMethod := 0, Fileacces := 0
+    DevVideo := 0x00000023, BuffMethod := 0, FileAccess := 0
     NumPut("UChar", 0x03, BRightness, 0)      ; 0x01 = Set AC, 0x02 = Set DC, 0x03 = Set both
     NumPut("UChar", 0x00, BRightness, 1)      ; The AC bRightness level
     NumPut("UChar", 0x00, BRightness, 2)      ; The DC bRightness level
 
     DllCall("DeviceIoControl"
         , "UInt", hLCD
-        , "UInt", (DevVideo << 16 | 0x126 << 2 | BuffMethod << 14 | Fileacces) ; IOCTL_VIDEO_QUERY_DISPLAY_BRIGHTNESS
+        , "UInt", (DevVideo << 16 | 0x126 << 2 | BuffMethod << 14 | FileAccess) ; IOCTL_VIDEO_QUERY_DISPLAY_BRIGHTNESS
         , "UInt", 0
         , "UInt", 0
         , "UInt", Brightness.Ptr
@@ -62,7 +62,7 @@ change_screen_brightness(offset) {
 
     DllCall("DeviceIoControl"
         , "UInt", hLCD
-        , "UInt", (DevVideo << 16 | 0x125 << 2 | BuffMethod << 14 | Fileacces) ; IOCTL_VIDEO_QUERY_SUPPORTED_BRIGHTNESS
+        , "UInt", (DevVideo << 16 | 0x125 << 2 | BuffMethod << 14 | FileAccess) ; IOCTL_VIDEO_QUERY_SUPPORTED_BRIGHTNESS
         , "UInt", 0
         , "UInt", 0
         , "UInt", SupportedBrightness.Ptr
@@ -106,7 +106,7 @@ change_screen_brightness(offset) {
 
     DllCall("DeviceIoControl"
         , "UInt", hLCD
-        , "UInt", (DevVideo << 16 | 0x127 << 2 | BuffMethod << 14 | Fileacces) ; IOCTL_VIDEO_SET_DISPLAY_BRIGHTNESS
+        , "UInt", (DevVideo << 16 | 0x127 << 2 | BuffMethod << 14 | FileAccess) ; IOCTL_VIDEO_SET_DISPLAY_BRIGHTNESS
         , "UInt", Brightness.Ptr
         , "UInt", 3
         , "UInt", 0
