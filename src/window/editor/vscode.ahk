@@ -62,14 +62,6 @@ Space & m:: {
     SendInput("^+!{m}")
 }
 
-; d(delete): 删除文件/目录
-Space & d:: {
-    hit_key_double(
-        () => "",
-        () => (SendInput("{Delete}")) ; 双击触发 Delete
-    )
-}
-
 #HotIf
 
 ; 聚焦在编辑区
@@ -157,24 +149,5 @@ Space & Enter::^Enter
 */
 <^#i::^!Up
 <^#k::^!Down
-
-; 以递归方式折叠/展开代码块 (当前层级)
-; 按键: LAlt + f
-<!f:: {
-    hit_key_double(
-        () => (
-            ; 单击触发折叠
-            SendInput("^{k}"),
-            Sleep(100),
-            SendInput("^{[}")
-        ),
-        () => (
-            ; 双击触发展开
-            SendInput("^{k}"),
-            Sleep(100),
-            SendInput("^{]}")
-        ),
-    )
-}
 
 #HotIf
