@@ -2,13 +2,14 @@
 Space & f:: return
 
 #HotIf GetKeyState("f", "p")
-Space & i::PgUp
-Space & k::PgDn
-Space & j::Home
-Space & l::End
 
-Space & e::Esc
-Space & d::Delete
+Space & i:: SendInput("{PgUp}")
+Space & k:: SendInput("{PgDn}")
+Space & j:: SendInput("{Home}")
+Space & l:: SendInput("{End}")
+
+Space & e:: SendInput("{Esc}")
+Space & d:: SendInput("{Delete}")
 
 ; m(menu): 右键菜单
 ; 第一次触发: 打开右键菜单
@@ -35,4 +36,5 @@ Space & w:: {
     prefix := WinGetExStyle("A") & 0x8 ? "【置顶】" : "【取消置顶】"
     show_tip(prefix title, , 20)
 }
+
 #HotIf
