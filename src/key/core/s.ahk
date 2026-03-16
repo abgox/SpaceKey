@@ -5,7 +5,7 @@ Space & s:: return
 
 ; 输出: ~
 ; 规律: t => tilde 波浪符
-Space & t:: SendInput("+{``}")
+Space & t::+`
 
 ; 输出: `
 ; 规律: b => backtick/backquote 反单引号
@@ -17,11 +17,11 @@ Space & g:: SendText("!")
 
 ; 输出: @
 ; 规律: o 和 @ 长得像
-Space & o:: SendInput("+{2}")
+Space & o::+2
 
 ; 输出: #
 ; 规律: n => number sign 井号
-Space & n:: SendInput("+{3}")
+Space & n::+3
 
 ; 输出: $
 ; 规律: d => dollar 美元符号
@@ -29,7 +29,7 @@ Space & d:: SendText("$")
 
 ; 输出: %
 ; 规律: p => percent 百分号
-Space & p:: SendInput("+{5}")
+Space & p::+5
 
 ; 输出: ^
 ; 规律: c => caret 脱字符
@@ -37,11 +37,11 @@ Space & c:: SendText("^")
 
 ; 输出: &
 ; 规律: h => hé (拼音) => 和 => 与
-Space & h:: SendInput("+{7}")
+Space & h::+7
 
 ; 输出: *
 ; 规律: a => asterisk 星号
-Space & a:: SendInput("+{8}")
+Space & a::+8
 
 ; 输出: []
 ; 规律: j => jǔ (拼音) => 矩形 => 方 => 方括号
@@ -57,7 +57,7 @@ Space & l:: SendText("{}"), SendInput("{Left}")
 
 ; 输出: -
 ; 规律: m => minus(减号)/middle(中横线)
-Space & m:: SendInput("{-}")
+Space & m::-
 
 ; 输出: _
 ; 规律: u => underline/underscore 下划线
@@ -65,15 +65,15 @@ Space & u:: SendText("_")
 
 ; 输出: +
 ; 规律: i => increase 加
-Space & i:: SendInput("+{=}")
+Space & i::+=
 
 ; 输出: =
 ; 规律: e => equal 等于
-Space & e:: SendInput("{=}")
+Space & e::=
 
 ; 输出: |
 ; 规律: v => vertical bar 竖线
-Space & v:: SendInput("+{\}")
+Space & v::+\
 
 ; 输出: \
 ; 规律: 方向相反

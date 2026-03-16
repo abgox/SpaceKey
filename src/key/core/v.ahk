@@ -4,9 +4,9 @@ Space & v:: return
 
 #HotIf GetKeyState("v", "p")
 
-Space & i:: SendInput("{Volume_Up}")
-Space & k:: SendInput("{Volume_Down}")
-Space & m:: SendInput("{Volume_Mute}") ; m(mute) 静音
+Space & i::Volume_Up
+Space & k::Volume_Down
+Space & m::Volume_Mute ; m(mute) 静音
 
 Space & j:: {
     v := change_screen_brightness(-10)
