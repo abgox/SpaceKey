@@ -12,6 +12,17 @@ Persistent
 ListLines 0
 KeyHistory 5
 
+OnError LogError
+LogError(exception, mode) {
+    try {
+        FileDelete(A_ScriptDir "\temp\key.ahk")
+        Run('"' A_AhkPath '" "' A_ScriptFullPath '"')
+        return false
+    } catch {
+        return true
+    }
+}
+
 fileDesc := "SpaceKey - abgox 的按键映射方案"
 
 A_IconTip := fileDesc
