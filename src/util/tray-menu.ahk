@@ -40,6 +40,9 @@ if (A_IsAdmin) {
 }
 
 A_TrayMenu.Add()
+A_TrayMenu.Add("打开软件目录", (*) => (Run("explorer.exe /select," A_ScriptFullPath)))
+
+A_TrayMenu.Add()
 A_TrayMenu.Add("暂停/运行", (item, *) => (
     A_IsPaused ? TraySetIcon(A_ScriptDir "/icon/app.png", , 1) : TraySetIcon(A_ScriptDir "/icon/app-pause.png", , 1),
     Suspend(-1),
