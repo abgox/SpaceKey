@@ -8,18 +8,13 @@ guide_gui(info) {
     g.AddLink(, '3. 更多详情请参考 <a href="https://spacekey.abgox.com">官网</a>、<a href="https://spacekey.abgox.com/faq">常见问题</a>，源代码仓库 <a href="https://github.com/abgox/SpaceKey">Github</a>、<a href="https://gitee.com/abgox/SpaceKey">Gitee</a>')
     return g
 }
+
 A_TrayMenu.Add()
-A_TrayMenu.Add("以管理员权限启动", (*) => (Run('*RunAs "' A_AhkPath '" /restart "' A_ScriptFullPath '"')))
-if (A_IsAdmin) {
-    A_TrayMenu.Check("以管理员权限启动")
-}
+A_TrayMenu.Add("开机自启动", toggleStartup)
 
 checkStartup() {
     return FileExist(A_Startup "\abgox.SpaceKey.lnk")
 }
-A_TrayMenu.Add()
-A_TrayMenu.Add("开机自启动", toggleStartup)
-
 toggleStartup(item, *) {
     static startup := checkStartup()
 
@@ -39,7 +34,12 @@ if (checkStartup()) {
 }
 
 A_TrayMenu.Add()
+A_TrayMenu.Add("以管理员权限启动", (*) => (Run('*RunAs "' A_AhkPath '" /restart "' A_ScriptFullPath '"')))
+if (A_IsAdmin) {
+    A_TrayMenu.Check("以管理员权限启动")
+}
 
+A_TrayMenu.Add()
 A_TrayMenu.Add("暂停/运行", (item, *) => (
     A_IsPaused ? TraySetIcon(A_ScriptDir "/icon/app.png", , 1) : TraySetIcon(A_ScriptDir "/icon/app-pause.png", , 1),
     Suspend(-1),
