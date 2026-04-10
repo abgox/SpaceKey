@@ -51,9 +51,10 @@
 >   - 包含 `core` 和 `window`，未来可能会添加其他目录
 >   - 由于 `custom` 的存在，`base` 可能会根据我的需求变化而变动
 >   - 如果你想要绝对的稳定性，可以通过 `custom` 目录覆盖它们
-> - `custom`: 自定义按键映射，会覆盖 `base` 目录下的同名文件，以实现自定义
->   - 举个例子，假设你想要修改 `base/core/s.ahk` 中对符号输入的映射，你可以创建 `custom/core/s.ahk` 文件
->   - 则 `custom/core/s.ahk` 会代替 `base/core/s.ahk` 生效
+> - `custom`: 自定义按键映射
+>   - 如果和 `base` 目录下的文件名相同，则 `custom` 的优先级更高
+>   - 举个例子，假设你想要修改 `base/core/s.ahk` 中对符号输入的映射
+>   - 你可以创建 `custom/core/s.ahk`，则它会代替 `base/core/s.ahk` 生效
 >   - 你可以通过 `temp/key.ahk` 查看最终生效的 `.ahk` 文件
 >   - 推荐的编辑工具：
 >     - 编辑器: [Visual Studio Code](https://code.visualstudio.com/)
@@ -71,8 +72,8 @@ SpaceKey/
 │   │   ├── window/      # 窗口映射
 │   │   └── ...          # 其他默认映射
 │   ├── custom/          # 用户的自定义方案
-│   │   ├── core/        # 覆盖核心映射
-│   │   ├── window/      # 覆盖窗口映射
+│   │   ├── core/        # 自定义核心映射
+│   │   ├── window/      # 自定义窗口映射
 │   │   └── ...          # 其他自定义映射
 │   ├── temp/key.ahk     # 动态生成的 #Include 文件
 │   └── ...              # 其他文件，请忽略它们
