@@ -12,20 +12,7 @@ Space & e::Esc
 Space & d::Delete
 
 ; m(menu): 右键菜单
-; 第一次触发: 打开右键菜单
-; 第二次触发: 退出右键菜单
-Space & m:: {
-    static flag := 0
-    if (flag) {
-        ; 退出右键菜单
-        SendInput("{Esc}")
-        flag := 0
-    } else {
-        ; 触发右键菜单
-        SendInput("{AppsKey}")
-        flag := 1
-    }
-}
+Space & m::AppsKey
 
 ; w(window): 窗口置顶 / 取消置顶
 Space & w:: {
