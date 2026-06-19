@@ -1,6 +1,12 @@
 ; v(volume): 音量
 ; v(visual): 视觉相关
 Space & v:: return
+; Space & v Up:: {
+;     for key in [
+;         "Volume_Up", "Volume_Down", "Volume_Mute" ; 抬起事件也会触发相关功能
+;     ]
+;         SendInput("{" key " Up}")
+; }
 
 #HotIf GetKeyState("v", "p")
 

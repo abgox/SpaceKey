@@ -1,5 +1,9 @@
 ; d(digit): 数字输入
 Space & d:: return
+Space & d Up:: {
+    for key in ["Numpad1", "Numpad2", "Numpad3", "Numpad4", "Numpad5", "Numpad6", "Numpad7", "Numpad8", "Numpad9", "Numpad0", "NumpadDot"]
+        SendInput("{" key " Up}")
+}
 
 #HotIf GetKeyState("d", "p")
 

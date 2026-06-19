@@ -1,5 +1,12 @@
 ; f(function): 功能按键
 Space & f:: return
+Space & f Up:: {
+    for key in [
+        "Esc", "Delete", "PgUp", "PgDn", "Home", "End",
+        ; "AppsKey" ; 抬起事件也会触发相关功能
+    ]
+        SendInput("{" key " Up}")
+}
 
 #HotIf GetKeyState("f", "p")
 

@@ -1,5 +1,9 @@
 ; s(symbol): 符号
 Space & s:: return
+Space & s Up:: {
+    for key in ["Shift", "``", "2", "3", "5", "7", "8", "-", "=", "\"]
+        SendInput("{" key " Up}")
+}
 
 #HotIf GetKeyState("s", "p")
 
