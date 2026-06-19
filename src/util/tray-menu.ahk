@@ -12,18 +12,26 @@ guide_gui(info) {
 A_TrayMenu.Add()
 A_TrayMenu.Add("开机自启动", toggleStartup)
 
+lnkPath := A_Startup "\abgox.SpaceKey.lnk"
+
 checkStartup() {
-    return FileExist(A_Startup "\abgox.SpaceKey.lnk")
+    if (FileExist(lnkPath)) {
+        FileGetShortcut(lnkPath, &target, , &args)
+        if (target == A_AhkPath && args == '"' A_ScriptFullPath '"') {
+            return true
+        }
+    }
+    return false
 }
 toggleStartup(item, *) {
     static startup := checkStartup()
 
     if (startup) {
         try {
-            FileDelete(A_Startup "\abgox.SpaceKey.lnk")
+            FileDelete(lnkPath)
         }
     } else {
-        FileCreateShortcut(A_AhkPath, A_Startup "\abgox.SpaceKey.lnk", , '"' A_ScriptFullPath '"', fileDesc, A_ScriptDir "\icon\app.ico", , , 7)
+        FileCreateShortcut(A_AhkPath, lnkPath, , '"' A_ScriptFullPath '"', fileDesc, A_ScriptDir "\icon\app.ico", , , 7)
     }
     startup := !startup
     A_TrayMenu.ToggleCheck("开机自启动")
