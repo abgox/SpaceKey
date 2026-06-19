@@ -8,11 +8,16 @@
 #SingleInstance Force
 #Warn All, Off
 
-Persistent
-ListLines 0
-KeyHistory 5
+Persistent()
+ListLines(0)
+KeyHistory(5)
 
-OnError LogError
+OnMessage(0x404, (wParam, lParam, *) => lParam == 0x202 ? (
+    A_IsPaused ? TraySetIcon(A_ScriptDir "/icon/app.png", , 1) : TraySetIcon(A_ScriptDir "/icon/app-pause.png", , 1),
+    Suspend(-1), Pause(-1)
+) : "")
+
+OnError(LogError)
 LogError(exception, mode) {
     try {
         FileDelete(A_ScriptDir "\temp\key.ahk")
