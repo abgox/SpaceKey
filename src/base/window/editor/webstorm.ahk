@@ -93,14 +93,6 @@ Space & c::^w
 ; g(go): 跳转到指定行
 Space & g::^g
 
-; r(run): 运行当前文件
-Space & r:: {
-    hit_key_double(
-        () => (SendInput("^{F5}")), ; 单击触发运行
-        () => (SendInput("+{F5}")), ; 双击触发终止运行
-    )
-}
-
 ; t(terminal): 终端
 Space & t:: {
     hit_key_double(

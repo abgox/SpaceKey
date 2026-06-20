@@ -96,14 +96,6 @@ Space & c::^w
 ; g(go): 跳转到指定行
 Space & g::^g
 
-; r(run): 运行当前文件(需要 Code Runner 插件)
-Space & r:: {
-    hit_key_double(
-        () => (SendInput("^!{n}")), ; 单击触发运行
-        () => (SendInput("^!{m}")), ; 双击触发终止运行
-    )
-}
-
 ; t(terminal): 终端
 Space & t:: {
     hit_key_double(
