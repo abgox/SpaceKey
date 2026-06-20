@@ -10,6 +10,7 @@ Space & l::Right
 
 Space & e::Enter ; 回车
 Space & b::BackSpace ; 退格
+Space & n::Delete ; 删除 n => 空(null) => 归零/清空 => 删除
 Space & Tab::+Tab ; Shift + Tab
 
 ; F1-F12
@@ -25,3 +26,13 @@ Space & 9::F9
 Space & 0::F10
 Space & -::F11
 Space & =::F12
+
+; p(pin): 窗口置顶 / 取消置顶
+Space & p:: {
+    if !has_active_window()
+        return
+    title := WinGetTitle("A")
+    WinSetAlwaysOnTop(-1, "A")
+    prefix := WinGetExStyle("A") & 0x8 ? "【置顶】" : "【取消置顶】"
+    show_tip(prefix title, , 20)
+}
