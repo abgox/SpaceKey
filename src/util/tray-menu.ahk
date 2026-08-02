@@ -5,7 +5,7 @@ guide_gui(info) {
     g.SetFont("s16", "Microsoft YaHei")
     g.AddLink(, '1. 左键单击托盘图标可以切换软件状态(暂停/运行)')
     g.AddLink(, '2. 如果 Space (空格键) 没有释放，再次按下即可恢复')
-    g.AddLink(, '3. 更多详情请参考 <a href="https://spacekey.abgox.com">官网</a> 或者源代码仓库 <a href="https://github.com/abgox/SpaceKey">Github</a>、<a href="https://gitee.com/abgox/SpaceKey">Gitee</a>')
+    g.AddLink(, '3. 更多详情请参考 <a href="https://spacekey.abgox.com">官网</a> 或者源代码仓库 <a href="https://github.com/abgox/SpaceKey">GitHub</a>、<a href="https://gitee.com/abgox/SpaceKey">Gitee</a>')
     return g
 }
 
@@ -57,7 +57,7 @@ about_gui(info) {
     g.SetFont("s16", "Microsoft YaHei")
     g.AddText("Center w" info.w - g.MarginX * 2, fileDesc).Focus()
     g.AddLink(, '1. 官网: <a href="https://spacekey.abgox.com">spacekey.abgox.com</a>')
-    g.AddLink(, '2. Github: <a href="https://github.com/abgox/SpaceKey">github.com/abgox/SpaceKey</a>')
+    g.AddLink(, '2. GitHub: <a href="https://github.com/abgox/SpaceKey">github.com/abgox/SpaceKey</a>')
     g.AddLink(, '3. Gitee: <a href="https://gitee.com/abgox/SpaceKey">gitee.com/abgox/SpaceKey</a>')
     return g
 }
